@@ -16,7 +16,7 @@ class Serpentd2Game(Game, metaclass=Singleton):
 
 
 
-        kwargs["executable_path"] = "D:/Softwares/Diablo 2/PlugY.exe -w"
+        kwargs["executable_path"] = "D:/Softwares/Diablo 2/Diablo 2/PlugY.exe -w"
 
 
 
