@@ -37,8 +37,11 @@
     <Content Include="plugins\Serpentd2GamePlugin\files\data\sprites\SPRITE_BUTTON_NIGHTMARE_0.png" />
     <Content Include="plugins\Serpentd2GamePlugin\files\data\sprites\SPRITE_BUTTON_NORMAL_0.png" />
     <Content Include="plugins\Serpentd2GamePlugin\files\data\sprites\SPRITE_BUTTON_SINGLE_PLAYER_0.png" />
-    <Content Include="plugins\Serpentd2GamePlugin\files\data\sprites\SPRITE_RUNE_0.png" />
+    <Content Include="plugins\Serpentd2GamePlugin\files\data\sprites\SPRITE_RUNE_DROP_1.png" />
+    <Content Include="plugins\Serpentd2GamePlugin\files\data\sprites\SPRITE_TEXT_RUNE_0.png" />
+    <Content Include="plugins\Serpentd2GamePlugin\files\data\sprites\SPRITE_RUNE_DROP_0.png" />
     <Content Include="plugins\Serpentd2GamePlugin\files\data\sprites\SPRITE_STATUE_LIFE_0.png" />
+    <Content Include="plugins\Serpentd2GamePlugin\files\data\sprites\SPRITE_STATUE_MANA_0.png" />
     <Content Include="plugins\Serpentd2GamePlugin\files\data\sprites\SPRITE_TEXT_SORCERESS_0.png" />
     <Content Include="requirements.txt" />
   </ItemGroup>
