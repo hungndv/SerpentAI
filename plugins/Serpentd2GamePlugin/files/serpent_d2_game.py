@@ -25,9 +25,6 @@ class Serpentd2Game(Game, metaclass=Singleton):
         self.api_class = d2API
         self.api_instance = None
 
-    def launch(self, dry_run=False):
-        os.system("D:/Softwares/Diablo 2/PlugY.exe -w")
-
     @property
     def screen_regions(self):
         regions = {
