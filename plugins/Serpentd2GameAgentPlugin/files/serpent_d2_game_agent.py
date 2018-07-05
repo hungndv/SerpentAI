@@ -1,10 +1,11 @@
-import time
+from pprint import pprint
+from threading import Thread
+from time import sleep
 
 from serpent.game_agent import GameAgent
 from serpent.input_controller import KeyboardKey
 from serpent.input_controller import MouseButton
 from serpent.sprite_locator import SpriteLocator
-from pprint import pprint
 
 
 class Serpentd2GameAgent(GameAgent):
@@ -21,6 +22,7 @@ class Serpentd2GameAgent(GameAgent):
         self.clicked_char_sorceress = False
         self.clicked_difficulty = False
         self.entered_world = False
+        self.found_a_rune = False
         #pass
 
     def handle_play(self, game_frame):
@@ -34,46 +36,49 @@ class Serpentd2GameAgent(GameAgent):
                 str(i)
             )
 
-        #self.input_controller.tap_key(KeyboardKey.KEY_RIGHT)
-        if self.clicked_button_single_player is False:
-            print("clicked_button_single_player")
-            location = self.find_sprite(self.game.sprites["SPRITE_BUTTON_SINGLE_PLAYER"], game_frame)
-            if location is not None:
-                self.move_mouse_to_center_and_click(location)
-                self.clicked_button_single_player = True
-                return
-
-        if self.clicked_char_sorceress is False:
-            print("clicked_char_sorceress")
-            location = self.find_sprite(self.game.sprites["SPRITE_TEXT_SORCERESS"], game_frame)
-            if location is not None:
-                self.move_mouse_to_center_and_click(location, doubleClick=True)
-                self.clicked_char_sorceress = True
-                return
-
-        #If need to select difficulty
-        if self.clicked_difficulty is False:
-            print("clicked_difficulty")
-            location = self.find_sprite(self.game.sprites["SPRITE_BUTTON_NORMAL"], game_frame)
-            if location is not None:
-                self.move_mouse_to_center_and_click(location)
-                self.clicked_difficulty = True
-                return
-
         if self.entered_world is False:
+            if self.clicked_button_single_player is False:
+                print("clicked_button_single_player")
+                location = self.find_sprite(self.game.sprites["SPRITE_BUTTON_SINGLE_PLAYER"], game_frame)
+                if location is not None:
+                    self.move_mouse_to_center_and_click(location)
+                    self.clicked_button_single_player = True
+                    return
+
+            if self.clicked_char_sorceress is False:
+                print("clicked_char_sorceress")
+                location = self.find_sprite(self.game.sprites["SPRITE_TEXT_SORCERESS"], game_frame)
+                if location is not None:
+                    self.move_mouse_to_center_and_click(location, doubleClick=True)
+                    self.clicked_char_sorceress = True
+                    return
+
+            #If need to select difficulty
+            if self.clicked_difficulty is False:
+                print("clicked_difficulty")
+                location = self.find_sprite(self.game.sprites["SPRITE_BUTTON_NORMAL"], game_frame)
+                if location is not None:
+                    self.move_mouse_to_center_and_click(location)
+                    self.clicked_difficulty = True
+                    return
+
             print("entered_world")
-            location = self.find_sprite(self.game.sprites["SPRITE_STATUE_LIFE"], game_frame)
+            location = self.find_sprite(self.game.sprites["SPRITE_STATUE_MANA"], game_frame)
             if location is not None:
                 self.entered_world = True
-                self.clicked_button_single_player = True
-                self.clicked_char_sorceress = True
-                self.clicked_difficulty = True
                 return
+        else: # entered_world
 
-        location = self.find_sprite(self.game.sprites["SPRITE_RUNE"], game_frame)
-        print("find rune")
-        if location is not None:
-            print("Rune found!")
+            #location = self.find_sprite(self.game.sprites["SPRITE_TEXT_RUNE"], game_frame)
+            #if location is not None:
+            #    print("Rune hold found!")
+            if self.found_a_rune is False:
+                self.input_controller.tap_key(KeyboardKey.KEY_X, 5)
+                location = self.find_sprite(self.game.sprites["SPRITE_TEXT_RUNE"], game_frame)
+                if location is not None:
+                    self.move_mouse_to_center_and_click(location)
+                else:
+                    self.input_controller.release_key(KeyboardKey.KEY_X)
 
         #pass
 
@@ -91,3 +96,6 @@ class Serpentd2GameAgent(GameAgent):
         self.input_controller.click(button)
         if doubleClick:
             self.input_controller.click(button)
+
+    def threaded_function(arg):
+        self.input_controller.tap_key(KeyboardKey.KEY_X, 5)
