@@ -36,31 +36,44 @@ class Serpentd2GameAgent(GameAgent):
 
         #self.input_controller.tap_key(KeyboardKey.KEY_RIGHT)
         if self.clicked_button_single_player is False:
+            print("clicked_button_single_player")
             location = self.find_sprite(self.game.sprites["SPRITE_BUTTON_SINGLE_PLAYER"], game_frame)
             if location is not None:
-                self.clicked_button_single_player = True
                 self.move_mouse_to_center_and_click(location)
-            return
+                self.clicked_button_single_player = True
+                return
 
         if self.clicked_char_sorceress is False:
+            print("clicked_char_sorceress")
             location = self.find_sprite(self.game.sprites["SPRITE_TEXT_SORCERESS"], game_frame)
             if location is not None:
-                self.clicked_char_sorceress = True
                 self.move_mouse_to_center_and_click(location, doubleClick=True)
-            return
-
-        if self.entered_world is False:
-            location = self.find_sprite(self.game.sprites["SPRITE_STATUE_LIFE"], game_frame)
-            if location is not None:
-                self.entered_world = True
+                self.clicked_char_sorceress = True
+                return
 
         #If need to select difficulty
-        if self.entered_world is False:
+        if self.clicked_difficulty is False:
+            print("clicked_difficulty")
             location = self.find_sprite(self.game.sprites["SPRITE_BUTTON_NORMAL"], game_frame)
             if location is not None:
                 self.move_mouse_to_center_and_click(location)
+                self.clicked_difficulty = True
+                return
 
+        if self.entered_world is False:
+            print("entered_world")
+            location = self.find_sprite(self.game.sprites["SPRITE_STATUE_LIFE"], game_frame)
+            if location is not None:
+                self.entered_world = True
+                self.clicked_button_single_player = True
+                self.clicked_char_sorceress = True
+                self.clicked_difficulty = True
+                return
 
+        location = self.find_sprite(self.game.sprites["SPRITE_RUNE"], game_frame)
+        print("find rune")
+        if location is not None:
+            print("Rune found!")
 
         #pass
 
