@@ -1,0 +1,34 @@
+{
+    "plugins": {
+        "Serpentd2GamePlugin": {
+            "name": "Serpentd2GamePlugin",
+            "version": "0.1.0",
+            "files": [
+                {
+                    "path": "serpent_d2_game.py",
+                    "pluggable": "Game"
+                }
+            ],
+            "plugins": [],
+            "libraries": [],
+            "config": {
+                "fps": 2
+            }
+        },
+        "Serpentd2GameAgentPlugin": {
+            "name": "Serpentd2GameAgentPlugin",
+            "version": "0.1.0",
+            "files": [
+                {
+                    "path": "serpent_d2_game_agent.py",
+                    "pluggable": "GameAgent"
+                }
+            ],
+            "plugins": [],
+            "libraries": [],
+            "config": {
+                "frame_handler": "PLAY"
+            }
+        }
+    }
+}

@@ -1,0 +1,4 @@
+Serpentd2GameAgentPlugin:
+  frame_handler: PLAY
+Serpentd2GamePlugin:
+  fps: 2

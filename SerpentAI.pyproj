@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{37ca5fca-9e85-4867-8bf4-4eeb25a92699}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile />
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId>
+    </InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include=".gitattributes" />
+    <Content Include=".gitignore" />
+    <Content Include="config\config.plugins.yml" />
+    <Content Include="config\config.yml" />
+    <Content Include="offshoot.manifest.json" />
+    <Content Include="offshoot.yml" />
+    <Content Include="plugins\Serpentd2GameAgentPlugin\.gitattributes" />
+    <Content Include="plugins\Serpentd2GameAgentPlugin\.gitignore" />
+    <Content Include="plugins\Serpentd2GameAgentPlugin\files\helpers\.gitkeep" />
+    <Content Include="plugins\Serpentd2GameAgentPlugin\files\ml_models\.gitkeep" />
+    <Content Include="plugins\Serpentd2GamePlugin\.gitignore" />
+    <Content Include="plugins\Serpentd2GamePlugin\files\data\sprites\.gitkeep" />
+    <Content Include="plugins\Serpentd2GamePlugin\files\data\sprites\SPRITE_BUTTON_HELL_0.png" />
+    <Content Include="plugins\Serpentd2GamePlugin\files\data\sprites\SPRITE_BUTTON_NIGHTMARE_0.png" />
+    <Content Include="plugins\Serpentd2GamePlugin\files\data\sprites\SPRITE_BUTTON_NORMAL_0.png" />
+    <Content Include="plugins\Serpentd2GamePlugin\files\data\sprites\SPRITE_BUTTON_SINGLE_PLAYER_0.png" />
+    <Content Include="plugins\Serpentd2GamePlugin\files\data\sprites\SPRITE_STATUE_LIFE_0.png" />
+    <Content Include="plugins\Serpentd2GamePlugin\files\data\sprites\SPRITE_TEXT_SORCERESS_0.png" />
+    <Content Include="requirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="plugins\Serpentd2GameAgentPlugin\files\serpent_d2_game_agent.py" />
+    <Compile Include="plugins\Serpentd2GameAgentPlugin\files\__init__.py" />
+    <Compile Include="plugins\Serpentd2GameAgentPlugin\plugin.py" />
+    <Compile Include="plugins\Serpentd2GameAgentPlugin\__init__.py" />
+    <Compile Include="plugins\Serpentd2GamePlugin\files\api\api.py" />
+    <Compile Include="plugins\Serpentd2GamePlugin\files\api\__init__.py" />
+    <Compile Include="plugins\Serpentd2GamePlugin\files\serpent_d2_game.py" />
+    <Compile Include="plugins\Serpentd2GamePlugin\files\__init__.py" />
+    <Compile Include="plugins\Serpentd2GamePlugin\plugin.py" />
+    <Compile Include="plugins\Serpentd2GamePlugin\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="config\" />
+    <Folder Include="datasets\" />
+    <Folder Include="datasets\collect_frames\" />
+    <Folder Include="datasets\collect_frames_for_context\" />
+    <Folder Include="datasets\current\" />
+    <Folder Include="plugins\" />
+    <Folder Include="plugins\Serpentd2GameAgentPlugin" />
+    <Folder Include="plugins\Serpentd2GameAgentPlugin\files" />
+    <Folder Include="plugins\Serpentd2GameAgentPlugin\files\helpers\" />
+    <Folder Include="plugins\Serpentd2GameAgentPlugin\files\ml_models\" />
+    <Folder Include="plugins\Serpentd2GamePlugin" />
+    <Folder Include="plugins\Serpentd2GamePlugin\files" />
+    <Folder Include="plugins\Serpentd2GamePlugin\files\api" />
+    <Folder Include="plugins\Serpentd2GamePlugin\files\data\" />
+    <Folder Include="plugins\Serpentd2GamePlugin\files\data\sprites\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>
