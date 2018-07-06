@@ -33,22 +33,32 @@
     <Content Include="plugins\Serpentd2GameAgentPlugin\files\ml_models\.gitkeep" />
     <Content Include="plugins\Serpentd2GamePlugin\.gitignore" />
     <Content Include="plugins\Serpentd2GamePlugin\files\data\sprites\.gitkeep" />
+    <Content Include="plugins\Serpentd2GamePlugin\files\data\sprites\SPRITE_BELT_COL_1_0.png" />
+    <Content Include="plugins\Serpentd2GamePlugin\files\data\sprites\SPRITE_BELT_COL_2_0.png" />
+    <Content Include="plugins\Serpentd2GamePlugin\files\data\sprites\SPRITE_BELT_COL_3_0.png" />
+    <Content Include="plugins\Serpentd2GamePlugin\files\data\sprites\SPRITE_BELT_COL_4_0.png" />
     <Content Include="plugins\Serpentd2GamePlugin\files\data\sprites\SPRITE_BUTTON_HELL_0.png" />
     <Content Include="plugins\Serpentd2GamePlugin\files\data\sprites\SPRITE_BUTTON_NIGHTMARE_0.png" />
     <Content Include="plugins\Serpentd2GamePlugin\files\data\sprites\SPRITE_BUTTON_NORMAL_0.png" />
     <Content Include="plugins\Serpentd2GamePlugin\files\data\sprites\SPRITE_BUTTON_SINGLE_PLAYER_0.png" />
     <Content Include="plugins\Serpentd2GamePlugin\files\data\sprites\SPRITE_INVENTORY_OPEN_0.png" />
+    <Content Include="plugins\Serpentd2GamePlugin\files\data\sprites\SPRITE_LIFE_LEVEL_0.png" />
+    <Content Include="plugins\Serpentd2GamePlugin\files\data\sprites\SPRITE_MANA_LEVEL_0.png" />
     <Content Include="plugins\Serpentd2GamePlugin\files\data\sprites\SPRITE_RUNE_DROP_1.png" />
     <Content Include="plugins\Serpentd2GamePlugin\files\data\sprites\SPRITE_STASH_OPEN_0.png" />
     <Content Include="plugins\Serpentd2GamePlugin\files\data\sprites\SPRITE_TEXT_RUNE_0.png" />
     <Content Include="plugins\Serpentd2GamePlugin\files\data\sprites\SPRITE_RUNE_DROP_0.png" />
     <Content Include="plugins\Serpentd2GamePlugin\files\data\sprites\SPRITE_STATUE_LIFE_0.png" />
     <Content Include="plugins\Serpentd2GamePlugin\files\data\sprites\SPRITE_STATUE_MANA_0.png" />
+    <Content Include="plugins\Serpentd2GamePlugin\files\data\sprites\SPRITE_TEXT_RUNE_1.png" />
     <Content Include="plugins\Serpentd2GamePlugin\files\data\sprites\SPRITE_TEXT_SORCERESS_0.png" />
     <Content Include="README.md" />
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="plugins\Serpentd2GameAgentPlugin\files\helpers\utils.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="plugins\Serpentd2GameAgentPlugin\files\serpent_d2_game_agent.py" />
     <Compile Include="plugins\Serpentd2GameAgentPlugin\files\__init__.py" />
     <Compile Include="plugins\Serpentd2GameAgentPlugin\plugin.py" />
