@@ -28,7 +28,14 @@ class Serpentd2Game(Game, metaclass=Singleton):
     @property
     def screen_regions(self):
         regions = {
-            "BUTTON_SINGLE_PLAYER": (301, 336, 315, 465)
+            "BUTTON_SINGLE_PLAYER": (301, 336, 315, 465),
+            "MNMAP_CHAR": (282, 400, 291, 417),
+            "TEXT_KURAST_DOCKS": (13, 679, 24, 783),
+            "TEXT_LUT_GHOLEIN": (13, 695, 24, 783),
+            "TEXT_LUT_GHOLEIN_1": (13, 695, 24, 783), #nightmare
+            "TEXT_ROGUE_ENCAMPMENT": (13, 643, 24, 783),
+            "TEXT_ROGUE_ENCAMPMENT_1": (13, 643, 24, 783), #nightmare
+            "TEXT_EXPANSION_UPPER_RIGHT": (61, 700, 71, 782)
         }
 
         return regions
